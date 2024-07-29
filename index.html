@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplication table</title>
+</head>
+<body>
+    <h1>MULTIPLICATION TABLE</h1>
+    <input type="text" name="jg" id="june">
+    <button onclick="send()">generate</button>
+    <ul id="jy"></ul>
+    <script>
+        function send(){
+        var val=document.getElementById("june")
+        var jy=document.getElementById("jy")
+        var ar=[]
+        for(let i=1; i<=10;i++){
+            var list=document.createElement("li")
+
+        list.innerText=` ${val.value}X${i}=${val.value*i}`
+        ar.push(list)
+        
+            
+        }
+        ar.map((e)=>[
+            jy.appendChild(e)
+        ])
+    }
+    </script>
+    
+</body>
+</html>
